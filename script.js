@@ -291,6 +291,10 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("Dragging Start");
       console.log("Dragging Item", newTierImage);
       event.dataTransfer.setData("text/plain", newTierImage.id);
+
+      newTierImage.addEventListener("dblclick", (event) => {
+        outer_image_wrapper.appendChild(newTierImage);
+      });
     });
 
     setTimeout(function () {
